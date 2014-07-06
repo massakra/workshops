@@ -11,3 +11,6 @@ config/database.yml
 .powenv
 .rvmrc
 .ruby-gemset
+
+*~
+*.swp
