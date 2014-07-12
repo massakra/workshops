@@ -109,6 +109,11 @@ describe ProductsController do
   end
 
   describe "POST create" do
+    let(:user) { create(:user) }
+    before do
+      sign_in user
+    end
+
     describe "with valid params" do
       it "creates a new Product" do
         expect {
