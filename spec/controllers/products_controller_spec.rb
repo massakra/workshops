@@ -150,6 +150,11 @@ describe ProductsController do
   end
 
   describe "PUT update" do
+    let(:user) { create(:user) }
+    before do
+      sign_in user
+    end
+
     describe "with valid params" do
       it "updates the requested product" do
         product = Product.create! valid_attributes
