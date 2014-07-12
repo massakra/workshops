@@ -153,6 +153,7 @@ describe ProductsController do
     let(:user) { create(:user) }
     before do
       sign_in user
+      valid_attributes[:user_id] = user.id
     end
 
     describe "with valid params" do
