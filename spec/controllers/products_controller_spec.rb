@@ -80,7 +80,7 @@ describe ProductsController do
   describe "GET index" do
     it "expose all products" do
       product = Product.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, { category_id: category.to_param }, valid_session
       expect(controller.products).to eq([product])
     end
   end
